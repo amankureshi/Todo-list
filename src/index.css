@@ -3,3 +3,34 @@
 
   /* color-scheme: light dark; */
 }
+
+.container {
+  width: 18rem;
+  margin: auto;
+  padding: 1rem;
+  background-color: #75768476;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.inputTask {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.container input {
+  width: 70%;
+  padding: 9px;
+  font-size: 1rem;
+  border-radius: 2px;
+  border: none;
+}
+
+.container .add-btn {
+  all: unset;
+  border: 2px solid black;
+  padding: 2px 16px;
+  border-radius: 3px;
+}
