@@ -1,7 +1,50 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-  /* color-scheme: light dark; */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #020631;
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.todoList {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.todoList .todoImage {
+  width: 4.5rem;
+  text-align: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.todoList .todoImage.animate {
+  animation: anime 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes anime {
+  from {
+    transform: rotate(-20deg)
+  }
+
+  to {
+    transform: rotate(20deg)
+  }
+}
+
+.todoList h1 {
+  padding: 10px;
+  text-align: center;
 }
 
 .container {
@@ -30,7 +73,41 @@
 
 .container .add-btn {
   all: unset;
-  border: 2px solid black;
-  padding: 2px 16px;
+  min-height: 1.5rem;
+  padding: 6px 16px;
   border-radius: 3px;
+  background-color: #F74933;
+}
+
+.taskData {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.taskData p {
+  font-size: 1.2rem;
+}
+
+.taskData #deleteIcon {
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #DC3545;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-task {
+  animation: fadeInUp 0.5s ease-in-out;
 }
