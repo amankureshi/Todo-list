@@ -9,6 +9,10 @@ const todo = () => {
     setInitial(e.target.value);
   };
   const getData = () => {
+    if (initial.trim() === "") {
+      alert("Please enter a task before adding!");
+      return;
+    }
     let store = [...data, initial];
     setData(store);
     setInitial("");
