@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { MdDelete } from "react-icons/md";
 
-const Todo = () => {
+const todo = () => {
   const [initial, setInitial] = useState("");
   const [data, setData] = useState([]);
   const [isHovered, setIsHovered] = useState(false);
@@ -9,14 +9,11 @@ const Todo = () => {
     setInitial(e.target.value);
   };
   const getData = () => {
-    console.log(initial);
     let store = [...data, initial];
     setData(store);
     setInitial("");
-    console.log(store);
   };
   const deleteTask = (indexValue) => {
-    console.log(indexValue);
     let filterData = data.filter((curElement, id) => {
       return id !== indexValue;
     });
@@ -56,7 +53,6 @@ const Todo = () => {
           </button>
         </div>
         {data.map((curValue, index) => {
-          console.log(index);
           return (
             <>
               <div className="taskData animate-task" key={index}>
@@ -71,4 +67,4 @@ const Todo = () => {
   );
 };
 
-export default Todo;
+export default todo;
